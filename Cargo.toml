@@ -1,0 +1,14 @@
+[package]
+name = "goniometry"
+version = "0.1.0"
+edition = "2021"
+authors = ["zerootoad"]
+description = "A simple Rust module for working with trigonometric functions like sine, cosine, tangent and much more to come."
+license = "GNU"
+readme = "README.md"
+repository = "https://github.com/zerootoad/Rust-Goniometry"
+categories = ["mathematics"]
+keywords = ["math", "trigonometry", "goniometry"]
+publish = true
+
+[dependencies]
