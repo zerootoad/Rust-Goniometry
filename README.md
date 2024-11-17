@@ -24,8 +24,7 @@ goniometry = "*"
 Here’s how you can use the library in your own project:
 
 ```rust
-use goniometry::functions::*;
-use goniometry::metrics::{Degree, Rad, Metric, MetricEntry};
+use goniometry::{sin, tan, cos ,Degree, Rad, Metric, MetricEntry};
 
 fn main() {
     // Create a Rad object with a fraction
@@ -105,7 +104,7 @@ You can install this library in your project by adding it as a dependency in `Ca
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/goniometry.git
+git clone https://github.com/zerootoad/goniometry.git
 ```
 
 ## License
