@@ -2,6 +2,8 @@
 
 A simple Rust library for performing **goniometry** operations (trigonometric functions like sine, cosine, tangent) and handling angle metrics (degrees and radians). This library allows you to define angles using values or fractions for greater precision, making it easy to calculate trigonometric values and convert between degrees and radians.
 
+***Incase of any issue or bug please feel free to report it in the issues***
+
 ## Features
 
 - **Trigonometric functions**: `sin`, `cos`, and `tan` for computing sine, cosine, and tangent of angles.
