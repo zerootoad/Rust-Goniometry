@@ -25,7 +25,7 @@ Here’s how you can use the library in your own project:
 
 ```rust
 use goniometry::functions::*;
-use goniometry::metrics::{Degree, Rad, MetricEntry};
+use goniometry::metrics::{Degree, Rad, Metric, MetricEntry};
 
 fn main() {
     // Create a Rad object with a fraction
