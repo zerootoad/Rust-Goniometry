@@ -1,18 +1,18 @@
 # Goniometry in Rust
 
-This is a simple Rust library that provides functionality for working with **goniometry** (trigonometric functions like sine, cosine, and tangent) and metrics (Degrees and Radians). The module offers a flexible way to handle angles, calculate trigonometric values, and convert between degrees and radians.
+A simple Rust library for performing **goniometry** operations (trigonometric functions like sine, cosine, tangent) and handling angle metrics (degrees and radians). This library allows you to define angles using values or fractions for greater precision, making it easy to calculate trigonometric values and convert between degrees and radians.
 
 ## Features
 
-- **Trigonometric functions:** `sin`, `cos`, `tan` for calculating sine, cosine, and tangent.
-- **Angle metrics:** Support for angles in both **Radians** and **Degrees**.
-- **Metric entries:** Define angles using specific values or fractions for more precision.
+- **Trigonometric functions**: `sin`, `cos`, and `tan` for computing sine, cosine, and tangent of angles.
+- **Angle metrics**: Support for angles in **Radians** and **Degrees**.
+- **Flexible metric entries**: Define angles using exact values or fractions for precise angle definitions.
 
 ## Usage
 
 ### Adding to your project
 
-Add the following to your `Cargo.toml` to include this module as a dependency (or clone the repository):
+Add the following to your `Cargo.toml` file to include this library as a dependency (or clone the repository if you prefer):
 
 ```toml
 [dependencies]
@@ -21,9 +21,11 @@ goniometry = "*"
 
 ### Example
 
+Here’s how you can use the library in your own project:
+
 ```rust
-use crate::goniometry::functions::*;
-use crate::goniometry::metrics::{Degree, Rad, MetricEntry};
+use goniometry::functions::*;
+use goniometry::metrics::{Degree, Rad, MetricEntry};
 
 fn main() {
     // Create a Rad object with a fraction
@@ -56,49 +58,51 @@ fn main() {
 
 ### Goniometry Functions
 
-The library provides trigonometric functions that accept `Degree` or `Rad` inputs and return the result of the respective calculations:
+The library provides the following trigonometric functions that accept either `Degree` or `Rad` objects:
 
-- `sin(angle)`
-- `cos(angle)`
-- `tan(angle)`
+- `sin(angle)` – Calculates the sine of the angle.
+- `cos(angle)` – Calculates the cosine of the angle.
+- `tan(angle)` – Calculates the tangent of the angle.
 
 ### Metric System
 
-The library supports two metric types:
+The library supports two types of angle metrics:
 
-- **Degrees**: Angles in degrees (e.g., 90°).
-- **Radians**: Angles in radians (e.g., π/2 radians).
+- **Degrees**: Represent angles in degrees (e.g., 90°).
+- **Radians**: Represent angles in radians (e.g., π/2 radians).
 
-#### Rad
+#### Rad (Radians)
 
-The `Rad` struct supports both value-based and fraction-based angle definitions.
+The `Rad` struct supports both value-based and fraction-based angle definitions. For example, you can create a radian value using a fraction like `π/2` (Fraction(1, 2)).
 
 #### Degree
 
-The `Degree` struct allows you to specify degrees directly.
+The `Degree` struct allows you to specify angles directly in degrees.
 
-### Examples
+### Creating Angles
 
-You can create angles with specific values or fractions:
+You can create angles using specific values or fractions:
 
 ```rust
-let rad = Rad::new(MetricEntry::Fraction(1, 2)); // π/2
+let rad = Rad::new(MetricEntry::Fraction(1, 2)); // π/2 radians
 let deg = Degree::new(MetricEntry::Value(90)); // 90 degrees
 ```
 
-### Functions
+### Using Trigonometric Functions
 
-The trigonometric functions accept angles in either radians or degrees:
+You can calculate trigonometric values for angles in either radians or degrees:
 
 ```rust
-let sine_value = sin(Degree::new(MetricEntry::Value(45)));
-let cosine_value = cos(Rad::new(MetricEntry::Fraction(1, 2))); // π/2 radians
-let tangent_value = tan(Degree::new(MetricEntry::Value(36)));
+let sine_value = sin(Degree::new(MetricEntry::Value(45)));  // sin(45 degrees)
+let cosine_value = cos(Rad::new(MetricEntry::Fraction(1, 2))); // cos(π/2 radians)
+let tangent_value = tan(Degree::new(MetricEntry::Value(36))); // tan(36 degrees)
 ```
 
 ## Installation
 
-Clone the repository and add the `src` folder to your project, or use it as a dependency from Cargo.
+You can install this library in your project by adding it as a dependency in `Cargo.toml` or by cloning the repository.
+
+Clone the repository:
 
 ```bash
 git clone https://github.com/your-username/goniometry.git
@@ -106,4 +110,4 @@ git clone https://github.com/your-username/goniometry.git
 
 ## License
 
-This project is licensed under the GNU License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the GNU License. See the [LICENSE](LICENSE) file for more details.
